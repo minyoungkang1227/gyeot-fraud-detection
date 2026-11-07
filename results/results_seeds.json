@@ -1,0 +1,377 @@
+[
+ {
+  "seed": 42,
+  "n_tx": 850958,
+  "n_eps": 244,
+  "cv": {
+   "iso_v2": {
+    "pr_auc": 0.0616274407716396,
+    "recall": 0.5450819672131147,
+    "impersonation": 0.926829268292683,
+    "cash_pickup": 0.0,
+    "loan_scam": 0.625,
+    "exploitation": 0.4583333333333333
+   },
+   "iso_v3": {
+    "pr_auc": 0.06937765162911792,
+    "recall": 0.5614754098360656,
+    "impersonation": 0.9512195121951219,
+    "cash_pickup": 0.0,
+    "loan_scam": 0.5892857142857143,
+    "exploitation": 0.5416666666666666
+   },
+   "stack_v2": {
+    "pr_auc": 0.37611963112657376,
+    "recall": 0.9016393442622951,
+    "impersonation": 0.8170731707317073,
+    "cash_pickup": 0.8448275862068966,
+    "loan_scam": 1.0,
+    "exploitation": 1.0
+   },
+   "stackN_v3_def": {
+    "pr_auc": 0.37929917665600277,
+    "recall": 0.8852459016393442,
+    "impersonation": 0.8170731707317073,
+    "cash_pickup": 0.7758620689655172,
+    "loan_scam": 1.0,
+    "exploitation": 1.0
+   },
+   "stackN_v3_tun": {
+    "pr_auc": 0.3532350249607165,
+    "recall": 0.8688524590163934,
+    "impersonation": 0.7439024390243902,
+    "cash_pickup": 0.8103448275862069,
+    "loan_scam": 1.0,
+    "exploitation": 1.0
+   }
+  },
+  "unseen_stack": 0.10655737704918032,
+  "unseen_by_sc": {
+   "impersonation": 0.012195121951219513,
+   "cash_pickup": 0.05172413793103448,
+   "loan_scam": 0.39285714285714285,
+   "exploitation": 0.0
+  },
+  "twotrack_known_v2": 0.8729508196721312,
+  "twotrack_unseen_v2": 0.38524590163934425,
+  "twotrack_known_v3": 0.8483606557377049,
+  "twotrack_unseen_v3": 0.3975409836065574,
+  "time": {
+   "n_eps": 105,
+   "iso": {
+    "pr_auc": 0.08331160853684222,
+    "recall": 0.6571428571428571
+   },
+   "time": {
+    "pr_auc": 0.23382204762245837,
+    "recall": 0.8857142857142857
+   },
+   "leak": {
+    "pr_auc": 0.42071297582420114,
+    "recall": 0.8857142857142857
+   },
+   "twotrack": 0.8571428571428571
+  },
+  "sec": 295
+ },
+ {
+  "seed": 1,
+  "n_tx": 851817,
+  "n_eps": 241,
+  "cv": {
+   "iso_v2": {
+    "pr_auc": 0.06421901494349677,
+    "recall": 0.5726141078838174,
+    "impersonation": 0.9529411764705882,
+    "cash_pickup": 0.0,
+    "loan_scam": 0.5192307692307693,
+    "exploitation": 0.6
+   },
+   "iso_v3": {
+    "pr_auc": 0.06590139559589138,
+    "recall": 0.5643153526970954,
+    "impersonation": 0.9294117647058824,
+    "cash_pickup": 0.0,
+    "loan_scam": 0.46153846153846156,
+    "exploitation": 0.66
+   },
+   "stack_v2": {
+    "pr_auc": 0.3502496161551224,
+    "recall": 0.8921161825726142,
+    "impersonation": 0.9058823529411765,
+    "cash_pickup": 0.7037037037037037,
+    "loan_scam": 0.9807692307692307,
+    "exploitation": 0.98
+   },
+   "stackN_v3_def": {
+    "pr_auc": 0.40177355173049745,
+    "recall": 0.8547717842323651,
+    "impersonation": 0.8235294117647058,
+    "cash_pickup": 0.6481481481481481,
+    "loan_scam": 1.0,
+    "exploitation": 0.98
+   },
+   "stackN_v3_tun": {
+    "pr_auc": 0.3966010878561468,
+    "recall": 0.8506224066390041,
+    "impersonation": 0.8705882352941177,
+    "cash_pickup": 0.5555555555555556,
+    "loan_scam": 1.0,
+    "exploitation": 0.98
+   }
+  },
+  "unseen_stack": 0.13692946058091288,
+  "unseen_by_sc": {
+   "impersonation": 0.011764705882352941,
+   "cash_pickup": 0.018518518518518517,
+   "loan_scam": 0.5961538461538461,
+   "exploitation": 0.0
+  },
+  "twotrack_known_v2": 0.8257261410788381,
+  "twotrack_unseen_v2": 0.42738589211618255,
+  "twotrack_known_v3": 0.8464730290456431,
+  "twotrack_unseen_v3": 0.43568464730290457,
+  "time": {
+   "n_eps": 94,
+   "iso": {
+    "pr_auc": 0.07865389761075907,
+    "recall": 0.6595744680851063
+   },
+   "time": {
+    "pr_auc": 0.31912115729668666,
+    "recall": 0.8297872340425532
+   },
+   "leak": {
+    "pr_auc": 0.44305280788328294,
+    "recall": 0.8617021276595744
+   },
+   "twotrack": 0.8297872340425532
+  },
+  "sec": 288
+ },
+ {
+  "seed": 2,
+  "n_tx": 851634,
+  "n_eps": 248,
+  "cv": {
+   "iso_v2": {
+    "pr_auc": 0.07016886193820314,
+    "recall": 0.5443548387096774,
+    "impersonation": 0.9340659340659341,
+    "cash_pickup": 0.016129032258064516,
+    "loan_scam": 0.42,
+    "exploitation": 0.6222222222222222
+   },
+   "iso_v3": {
+    "pr_auc": 0.0697007654543858,
+    "recall": 0.5241935483870968,
+    "impersonation": 0.9340659340659341,
+    "cash_pickup": 0.0,
+    "loan_scam": 0.44,
+    "exploitation": 0.5111111111111111
+   },
+   "stack_v2": {
+    "pr_auc": 0.3589840427240083,
+    "recall": 0.8870967741935484,
+    "impersonation": 0.8571428571428571,
+    "cash_pickup": 0.7741935483870968,
+    "loan_scam": 0.98,
+    "exploitation": 1.0
+   },
+   "stackN_v3_def": {
+    "pr_auc": 0.39541256597612495,
+    "recall": 0.8709677419354839,
+    "impersonation": 0.8021978021978022,
+    "cash_pickup": 0.7741935483870968,
+    "loan_scam": 1.0,
+    "exploitation": 1.0
+   },
+   "stackN_v3_tun": {
+    "pr_auc": 0.4026961912355968,
+    "recall": 0.8830645161290323,
+    "impersonation": 0.8461538461538461,
+    "cash_pickup": 0.7580645161290323,
+    "loan_scam": 1.0,
+    "exploitation": 1.0
+   }
+  },
+  "unseen_stack": 0.09274193548387097,
+  "unseen_by_sc": {
+   "impersonation": 0.01098901098901099,
+   "cash_pickup": 0.03225806451612903,
+   "loan_scam": 0.38,
+   "exploitation": 0.022222222222222223
+  },
+  "twotrack_known_v2": 0.8306451612903226,
+  "twotrack_unseen_v2": 0.3548387096774194,
+  "twotrack_known_v3": 0.842741935483871,
+  "twotrack_unseen_v3": 0.3629032258064516,
+  "time": {
+   "n_eps": 103,
+   "iso": {
+    "pr_auc": 0.06775598536261006,
+    "recall": 0.4854368932038835
+   },
+   "time": {
+    "pr_auc": 0.20360917888511917,
+    "recall": 0.7766990291262136
+   },
+   "leak": {
+    "pr_auc": 0.42016615980874206,
+    "recall": 0.8446601941747572
+   },
+   "twotrack": 0.7184466019417476
+  },
+  "sec": 299
+ },
+ {
+  "seed": 3,
+  "n_tx": 851241,
+  "n_eps": 224,
+  "cv": {
+   "iso_v2": {
+    "pr_auc": 0.062134870408816455,
+    "recall": 0.5357142857142857,
+    "impersonation": 0.9545454545454546,
+    "cash_pickup": 0.022222222222222223,
+    "loan_scam": 0.5833333333333334,
+    "exploitation": 0.4307692307692308
+   },
+   "iso_v3": {
+    "pr_auc": 0.06041947427276022,
+    "recall": 0.5848214285714286,
+    "impersonation": 0.9545454545454546,
+    "cash_pickup": 0.022222222222222223,
+    "loan_scam": 0.6041666666666666,
+    "exploitation": 0.5846153846153846
+   },
+   "stack_v2": {
+    "pr_auc": 0.41695549175342583,
+    "recall": 0.8303571428571429,
+    "impersonation": 0.7575757575757576,
+    "cash_pickup": 0.5111111111111111,
+    "loan_scam": 1.0,
+    "exploitation": 1.0
+   },
+   "stackN_v3_def": {
+    "pr_auc": 0.4156246281848417,
+    "recall": 0.8348214285714286,
+    "impersonation": 0.7121212121212122,
+    "cash_pickup": 0.6,
+    "loan_scam": 1.0,
+    "exploitation": 1.0
+   },
+   "stackN_v3_tun": {
+    "pr_auc": 0.408972343210942,
+    "recall": 0.8616071428571429,
+    "impersonation": 0.7424242424242424,
+    "cash_pickup": 0.7111111111111111,
+    "loan_scam": 1.0,
+    "exploitation": 0.9846153846153847
+   }
+  },
+  "unseen_stack": 0.07589285714285714,
+  "unseen_by_sc": {
+   "impersonation": 0.0,
+   "cash_pickup": 0.0,
+   "loan_scam": 0.3333333333333333,
+   "exploitation": 0.015384615384615385
+  },
+  "twotrack_known_v2": 0.8125,
+  "twotrack_unseen_v2": 0.3125,
+  "twotrack_known_v3": 0.8303571428571429,
+  "twotrack_unseen_v3": 0.3169642857142857,
+  "time": {
+   "n_eps": 90,
+   "iso": {
+    "pr_auc": 0.05972482320223549,
+    "recall": 0.5777777777777777
+   },
+   "time": {
+    "pr_auc": 0.2728483039172073,
+    "recall": 0.7555555555555555
+   },
+   "leak": {
+    "pr_auc": 0.4655732036534687,
+    "recall": 0.8888888888888888
+   },
+   "twotrack": 0.7555555555555555
+  },
+  "sec": 287
+ },
+ {
+  "seed": 4,
+  "n_tx": 852231,
+  "n_eps": 243,
+  "cv": {
+   "iso_v2": {
+    "pr_auc": 0.06007035900545438,
+    "recall": 0.51440329218107,
+    "impersonation": 0.9358974358974359,
+    "cash_pickup": 0.0,
+    "loan_scam": 0.4642857142857143,
+    "exploitation": 0.6190476190476191
+   },
+   "iso_v3": {
+    "pr_auc": 0.05706451385937596,
+    "recall": 0.49382716049382713,
+    "impersonation": 0.9102564102564102,
+    "cash_pickup": 0.0,
+    "loan_scam": 0.4107142857142857,
+    "exploitation": 0.6190476190476191
+   },
+   "stack_v2": {
+    "pr_auc": 0.2794705414303982,
+    "recall": 0.8436213991769548,
+    "impersonation": 0.7948717948717948,
+    "cash_pickup": 0.6716417910447762,
+    "loan_scam": 1.0,
+    "exploitation": 1.0
+   },
+   "stackN_v3_def": {
+    "pr_auc": 0.3378714351241554,
+    "recall": 0.8559670781893004,
+    "impersonation": 0.7692307692307693,
+    "cash_pickup": 0.746268656716418,
+    "loan_scam": 1.0,
+    "exploitation": 1.0
+   },
+   "stackN_v3_tun": {
+    "pr_auc": 0.36325954295947416,
+    "recall": 0.8683127572016461,
+    "impersonation": 0.7948717948717948,
+    "cash_pickup": 0.7611940298507462,
+    "loan_scam": 1.0,
+    "exploitation": 1.0
+   }
+  },
+  "unseen_stack": 0.17695473251028807,
+  "unseen_by_sc": {
+   "impersonation": 0.0,
+   "cash_pickup": 0.014925373134328358,
+   "loan_scam": 0.75,
+   "exploitation": 0.0
+  },
+  "twotrack_known_v2": 0.7489711934156379,
+  "twotrack_unseen_v2": 0.37037037037037035,
+  "twotrack_known_v3": 0.8189300411522634,
+  "twotrack_unseen_v3": 0.38271604938271603,
+  "time": {
+   "n_eps": 113,
+   "iso": {
+    "pr_auc": 0.06606456126098405,
+    "recall": 0.48672566371681414
+   },
+   "time": {
+    "pr_auc": 0.30493510376467886,
+    "recall": 0.8230088495575221
+   },
+   "leak": {
+    "pr_auc": 0.40336498715306285,
+    "recall": 0.8584070796460177
+   },
+   "twotrack": 0.7787610619469026
+  },
+  "sec": 291
+ }
+]

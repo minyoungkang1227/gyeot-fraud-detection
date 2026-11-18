@@ -63,6 +63,7 @@
 | `src/gen_data_v6.py`, `src/exp_v6.py` | v6 조절 가능한 생성기(신호 크기·진행 속도·문헌 신호), 민감도 실험 |
 | `results/` | v3·v4 실험 결과(json, csv) |
 | `docs/example_walkthrough.md` | 거래 한 건의 판단 과정 |
+| `docs/case_study.md` | 사례 연구: 가상의 인물 한 명의 2년을 두 모델에 통과시킨 결과 (`src/case_study.py`) |
 | `docs/literature_review.md` | 국내외 연구 검토: 무엇을 반영했고 무엇을 반영하지 않았는지 |
 | `tests/test_no_leakage.py` | 누수 검증: 미래 거래를 지워도 과거 피처가 바뀌지 않는지 확인 |
 | `figures/` | 노트북 결과 그림 |

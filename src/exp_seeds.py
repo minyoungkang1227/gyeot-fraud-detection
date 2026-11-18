@@ -90,7 +90,8 @@ def run(seed):
     for name, s_iso in [("v2", S["iso_v2"]), ("v3", S["iso_v3"])]:
         st = S["stack_v2"] if name == "v2" else S["stackN_v3_tun"]
         out[f"twotrack_known_{name}"] = two_track(ev, st, s_iso, K, eps.episode)
-        un = sum(two_track(ev, S[f"loso_{sc}"] if name == "v3" else S[f"loso_{sc}"], s_iso, K, eps[eps.scenario == sc].episode) * w[sc] for sc in SC) / w.sum()
+        # 주의: 유형을 뺀(LOSO) 스태킹은 v3 방식 하나만 학습했다. 'v2' 쪽 값은 그 스태킹 + v2 피처 IF의 조합이다.
+        un = sum(two_track(ev, S[f"loso_{sc}"], s_iso, K, eps[eps.scenario == sc].episode) * w[sc] for sc in SC) / w.sum()
         out[f"twotrack_unseen_{name}"] = un
 
     # 시간순 검증

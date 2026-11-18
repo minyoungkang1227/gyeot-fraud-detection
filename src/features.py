@@ -31,10 +31,19 @@ def build_features(df):
     df["night"] = (df["hour"] < 6).astype(int)
 
     # 1) 같은 유형 거래 대비 평소와 얼마나 다른가 (개인별 z-score)
+    #    과거 평균·표준편차를 누적합으로 계산한다(그룹별 expanding 대비 약 10배 빠름, 결과는 같음).
+    #    그룹 평균을 먼저 빼 두면 제곱합 계산에서 자릿수 손실이 줄어든다.
     g = df.groupby(["pid", "type"])["log_amt"]
-    df["past_mean"] = g.transform(lambda s: s.shift().expanding().mean())
-    df["past_std"] = g.transform(lambda s: s.shift().expanding().std())
-    df["past_n"] = df.groupby(["pid", "type"]).cumcount()
+    n = g.cumcount()
+    x = df["log_amt"] - g.transform("mean")          # 중심화는 계산 안정용. 아래에서 다시 더해 과거 정보만 남는다
+    gx = x.groupby([df["pid"], df["type"]])
+    s1 = gx.cumsum() - x
+    s2 = (x * x).groupby([df["pid"], df["type"]]).cumsum() - x * x
+    pm = s1 / n.where(n > 0)
+    var = (s2 - n * pm * pm) / (n - 1).where(n > 1)
+    df["past_mean"] = pm + (df["log_amt"] - x)
+    df["past_std"] = np.sqrt(var.clip(lower=0))
+    df["past_n"] = n
     df["z_type"] = (df["log_amt"] - df["past_mean"]) / df["past_std"].clip(lower=0.3)
     df["z_type"] = df["z_type"].where(df["past_n"] >= 3, 0.0).fillna(0.0)
 

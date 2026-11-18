@@ -76,9 +76,13 @@ def monthly_raw(df, n_months):
 
     fill0 = ["bill_missed", "bill_dup", "card_dup", "card_n", "atm_n", "night", "act"]
     out[fill0] = out[fill0].fillna(0)
-    out["bill_dev"] = out.bill_dev.fillna(out.groupby("pid").bill_dev.transform("median"))
-    for col in ["top_mer", "atm_amt"]:
-        out[col] = out[col].fillna(out.groupby("pid")[col].transform("median"))
+    # 값이 없는 달(그달 공과금·카드·ATM 거래가 없음)은 그 가구의 '기준선 6개월' 중앙값으로 채운다.
+    # 전체 기간 중앙값으로 채우면 미래 달의 정보가 과거 피처에 섞인다(누수). tests/test_no_leakage.py가 잡아낸 부분.
+    base = out[out.index.get_level_values("m") < BASE_M]
+    for col in ["bill_dev", "top_mer", "atm_amt"]:
+        med = base[col].groupby("pid").median()
+        fill = pd.Series(out.index.get_level_values("pid").map(med), index=out.index).fillna(base[col].median())
+        out[col] = out[col].fillna(fill)
     return out.fillna(0), df
 
 

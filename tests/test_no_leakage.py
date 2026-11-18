@@ -15,6 +15,7 @@ from features_v3 import build_features_v3, FEATURES_V3
 from features_v4 import build_features_v4, FEATURES_V4
 from gen_data_v5 import generate_decline
 from decline_features import monthly_raw, change_features, CHG
+from counterparty import add_counterparties, add_cp_features, CP
 
 KEY = ["pid", "ts", "type", "amount", "payee"]
 
@@ -43,12 +44,14 @@ def check_decline(df, c, name):
 
 
 if __name__ == "__main__":
-    df, _ = generate(n_people=300, seed=7)
+    df, eps = generate(n_people=300, seed=7)
     T = pd.Timestamp("2025-08-15")
     bad = []
     bad += check_tx(build_features, FEATURES, df, T, "거래 피처 v2")
     bad += check_tx(build_features_v3, FEATURES_V3, df, T, "거래 피처 v3")
     bad += check_tx(build_features_v4, FEATURES_V4, df, T, "거래 피처 v4")
+    dcp = add_counterparties(df, eps, 7)
+    bad += check_tx(lambda d: add_cp_features(build_features_v4(d)), CP, dcp, T, "상대 계좌 피처 v7")
     d5, *_ = generate_decline(n_people=300, seed=7)
     bad += check_decline(d5, 11, "가구-월 변화 피처 v5")
     print("\n결과:", "누수 없음" if not bad else f"누수 의심 피처 {sorted(set(bad))}")

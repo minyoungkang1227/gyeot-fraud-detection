@@ -1,10 +1,22 @@
 {
- "cut_stack": 0.9481751671735982,
- "cut_iso": 0.727716610782018,
- "cut_decline": 9.417121505729066,
  "K": 1704,
- "cal_recall": 0.85,
- "cal_alerts": 1518,
+ "mule": "MULE13",
+ "mule_first": "2025-09-01 05:42:00",
  "onset_month": 10.0,
- "n_tx": 560
+ "n_tx": 562,
+ "v4": {
+  "cut_stack": 0.9532931561552871,
+  "cut_iso": 0.7262543812815251,
+  "cal_recall": 0.875,
+  "cal_eps": 40,
+  "cal_alerts": 1461
+ },
+ "v7": {
+  "cut_stack": 0.9161976377185853,
+  "cut_iso": 0.7233153195944816,
+  "cal_recall": 0.875,
+  "cal_eps": 40,
+  "cal_alerts": 1641
+ },
+ "cut_decline": 9.417121505729066
 }
